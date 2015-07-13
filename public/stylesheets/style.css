@@ -4,6 +4,7 @@ body { font: 16px "Georgia", sans-serif; }
 #page-wrap { margin: 2% auto; color: white; }
 #page-wrap > .main { border: 1px solid #999; padding: 1%;
                       margin-bottom: 1px; color: black; }
+.info_autor{ text-align: center; }
 
 section > div { padding: 20px; }
 header, nav, section { text-align: center; color: #f5f5f5; }

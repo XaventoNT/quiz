@@ -10,3 +10,8 @@ exports.answer = function (req, res) {
     res.render('quizes/answer', {respuesta: 'Incorrecto'});
   }
 };
+
+//GET /autor
+exports.autor = function (req, res) {
+  res.render('autor');
+};
