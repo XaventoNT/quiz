@@ -2,10 +2,14 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css"/>
+    <link rel="stylesheet" href="/stylesheets/wide.css" type="text/css"
+      media="only screen and (min-width: 530px) and (min-device-width: 481px)"/>
+    <link rel="stylesheet" href="/stylesheets/smartphone.css" type="text/css"
+      media="only screen and (max-width: 480px)" />
   </head>
   <body>
-    <h1>Bienvenido a <%= title %></h1>
+    <h3><span>Bienvenido a <%= title %></span></h3>
     <p>El portal donde podrá crear sus propios juegos!</p>
     <p><a href="/quizes/question">Comience a jugar</a></p>
   </body>
