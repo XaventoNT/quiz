@@ -9,7 +9,14 @@
     media="only screen and (max-width: 480px)" />
 </head>
 <body>
-  <%= respuesta %>
-  <p><a href="/quizes/<%= quiz.id %>">Clic para intentar otra vez</a></p>
+  <table>
+    <% var i; for (i = 0; i < quizes.length; i++){ %>
+    <tr>
+      <td>
+        <a href="/quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a>
+      </td>
+    </tr>
+    <% } %>
+  </table>
 </body>
 </html>

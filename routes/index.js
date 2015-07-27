@@ -9,10 +9,12 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Quiz' });
 });
 
+// GET /quizes
+router.get('/quizes/index', quizController.index);
 // GET question page
-router.get('/quizes/question', quizController.question);
+router.get('/quizes/:quizId(\\d+)', quizController.show);
 // GET answer page
-router.get('/quizes/answer', quizController.answer);
+router.get('/quizes/:quizId(\\d+)/answer', quizController.answer);
 // GET autor page
 router.get('/autor', quizController.autor);
 

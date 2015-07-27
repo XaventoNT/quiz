@@ -10,8 +10,8 @@
     media="only screen and (max-width: 480px)" />
 </head>
 <body>
-  <form method="get" action="/quizes/answer">
-    <p><b>Pregunta:</b> <%= pregunta %></p>
+  <form method="get" action="/quizes/<%= quiz.id %>/answer">
+    <p><b>Pregunta:</b> <%= quiz.pregunta %></p>
     <input type="text" name="respuesta" value="Responda aquí" />
     <input type="submit" value="Enviar" />
   </form>
