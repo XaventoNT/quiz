@@ -9,6 +9,13 @@
     media="only screen and (max-width: 480px)" />
 </head>
 <body>
+  <form method="get" action="/quizes">
+    <p>
+      Buscar:
+      <input type="text" name="search" value="<%= busqueda %>"/>
+      <input type="submit" value="Buscar" />
+    </p>
+  </form>
   <table>
     <% var i; for (i = 0; i < quizes.length; i++){ %>
     <tr>

@@ -12,7 +12,7 @@ router.get('/', function(req, res) {
 // Autoload de comandos cuando la ruta contiene el parametro :quizId
 router.param('quizId', quizController.load);
 // GET /quizes
-router.get('/quizes/index', quizController.index);
+router.get('/quizes', quizController.index);;
 // GET question page
 router.get('/quizes/:quizId(\\d+)', quizController.show);
 // GET answer page
