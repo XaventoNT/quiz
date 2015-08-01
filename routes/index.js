@@ -19,5 +19,9 @@ router.get('/quizes/:quizId(\\d+)', quizController.show);
 router.get('/quizes/:quizId(\\d+)/answer', quizController.answer);
 // GET autor page
 router.get('/autor', quizController.autor);
+// Formulario nueva pregunta
+router.get('/quizes/new', quizController.new);
+// Crear pregunta
+router.post('/quizes/create', quizController.create);
 
 module.exports = router;
