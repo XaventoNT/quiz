@@ -22,6 +22,16 @@
       </nav>
 
       <section class="main" id="s1">
+        <!-- Impresión de errores-->
+        <% if (errors.length){ %>
+            <span id="ErrorMsgs">
+              Corregir los siguientes errores:<br/>
+              <% for (var i in errors){ %>
+                  <span> <%= errors[i].message %> </span><br/>
+              <% } %>
+            </span>
+        <% } %>
+        <!-- Pagina principal-->
         <%- body %>
       </section>
 
