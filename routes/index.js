@@ -27,5 +27,7 @@ router.post('/quizes/create', quizController.create);
 router.get('/quizes/:quizId(\\d+)/edit', quizController.edit);
 // Actualizar pregunta en DB
 router.put('/quizes/:quizId(\\d+)', quizController.update);
+// Borrar pregunta
+router.delete('/quizes/:quizId(\\d+)', quizController.delete);
 
 module.exports = router;

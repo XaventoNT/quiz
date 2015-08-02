@@ -100,6 +100,15 @@ exports.update = function (req, res) {
   );// validate().then
 };
 
+// DELETE /quizes/:quizId
+exports.delete = function (req, res) {
+  req.quiz.destroy().then(
+    function () {
+      res.redirect('/quizes');
+    }
+  ).catch(function (error) { next(error); } );
+}
+
 //GET /autor
 exports.autor = function (req, res) {
   res.render('autor', {errors: []});
