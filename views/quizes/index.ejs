@@ -11,12 +11,29 @@
 <body>
   <form method="get" action="/quizes">
     <p>
+      Categoria: <% include _categorias.ejs %><br/>
       Buscar:
       <input type="text" name="search" value="<%= busqueda %>"/>
       <input type="submit" value="Buscar" />
     </p>
   </form>
+
+   <!--Tabla con las preguntas-->
   <table>
+    <!--Mensaje sobre lo que se busco-->
+    <tr>
+      <td>
+        <% if (busqueda){ %>
+              <span class="msgBusqueda">Se busco &quot;<%= busqueda%>&quot; </span>
+        <% }
+          if (categoria){ %>
+              <span class="msgBusqueda">Categoria: <%= categoria %></span>
+        <% }else if (busqueda){ %>
+              <span class="msgBusqueda">en todas las categorias</span>
+        <% } %>
+      </td>
+    </tr>
+    <!--Lista de preguntas-->
     <% var i; for (i = 0; i < quizes.length; i++){ %>
     <tr>
       <td>
@@ -34,7 +51,12 @@
       </td>
     </tr>
     <% } %>
+    <!--Boton crear pregunta-->
+    <tr>
+      <td>
+        <a href="/quizes/new"><button type="button">Crear pregunta</button></a>
+      </td>
+    </tr>
   </table>
-  <a href="/quizes/new"><button type="button">Crear pregunta</button></a>
 </body>
 </html>

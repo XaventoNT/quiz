@@ -6,5 +6,10 @@
   <label for="resp" class="rem">Respuesta:</label>
   <input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta%>" />
 </p>
+<p>
+  <label for="resp" class="rem">Respuesta:</label>
+  <!-- <input type="text" id="resp" name="quiz[categoria]" value="<%= quiz.categoria%>" /> -->
+  <% include _categoriasEdit.ejs %>
+</p>
 <a href="/quizes"> <button type="button">Cancelar</button> </a>
 <input type="submit" value="Guardar">

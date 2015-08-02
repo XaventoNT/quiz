@@ -12,7 +12,8 @@ header, nav {  background: #326ada; }
 section { background: #eee; }
 footer { background: #444444; text-align: center; color: #d2d2d2; }
 nav span { margin: 0px 10px 0px 0px; }
-#ErrorMsgs { color: #800000; font-size: smaler}
+#ErrorMsgs { color: #800000; font-size: smaller}
+.msgBusqueda{ color: #74d600; font-size: smaller}
 
 a {
   color: #00B7FF;
