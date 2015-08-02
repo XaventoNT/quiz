@@ -21,7 +21,11 @@ router.get('/quizes/:quizId(\\d+)/answer', quizController.answer);
 router.get('/autor', quizController.autor);
 // Formulario nueva pregunta
 router.get('/quizes/new', quizController.new);
-// Crear pregunta
+// Crear pregunta en DB
 router.post('/quizes/create', quizController.create);
+// Editar pregunta
+router.get('/quizes/:quizId(\\d+)/edit', quizController.edit);
+// Actualizar pregunta en DB
+router.put('/quizes/:quizId(\\d+)', quizController.update);
 
 module.exports = router;

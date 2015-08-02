@@ -72,6 +72,34 @@ exports.create = function (req, res) {
   );// fin validate()
 };
 
+// GET /quizes/:quizId/edit
+exports.edit = function (req, res) {
+  var quiz = req.quiz; // autoload de instancia quiz
+
+  res.render('quizes/edit', {quiz: quiz, errors: []});
+};
+
+// PUT /quizes/:quizId/update
+exports.update = function (req, res) {
+  req.quiz.pregunta = req.body.quiz.pregunta;
+  req.quiz.respuesta = req.body.quiz.respuesta;
+
+  req.quiz.validate().then(
+    function (err) {
+      if (err){
+        res.render('quizes/edit', {quiz: req.quiz, errors: err.errors});
+      } else {
+        // Gurada los cambios en la DB
+        req.quiz.save( {fields: ["pregunta", "respuesta"]} ).then(
+          function () {
+            res.redirect('/quizes');
+          }
+        );
+      }// fin else
+    }// function(err)
+  );// validate().then
+};
+
 //GET /autor
 exports.autor = function (req, res) {
   res.render('autor', {errors: []});
